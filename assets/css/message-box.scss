@@ -1,0 +1,38 @@
+/**message->*/
+/*
+    Designed by Tafadzwa Moyo
+*/
+#messages{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top:20px;
+}
+.message_box{
+    background-color: white;
+    padding-top:7%;
+    padding-bottom:7%;
+    border-radius: 25px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+%message_shared{
+    margin-left:100px; 
+    margin-right:auto;
+    font-size: 30px;
+}
+.message_content{
+    @extend %message_shared;
+    color: #757575;
+}
+.message_sender{
+    @extend %message_shared;
+    color: black;
+}
+.sender_img{
+    width:100px;
+}
+.sender_img_container{
+    margin-left:auto; 
+    margin-right:100px;
+}
+/**<-message*/

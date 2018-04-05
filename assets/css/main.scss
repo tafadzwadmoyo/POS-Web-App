@@ -1,0 +1,68 @@
+/*
+    Designed by Tafadzwa Moyo
+*/
+
+
+/*Body->*/
+body{
+    background-image: url("/assets/images/bg@2x.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-attachment: fixed;
+    color:  white;
+    font-size: 60px;
+    font-family: "Roboto"
+}
+/**Top nav-bar->*/
+#nav-bar{
+    padding-top: 10px;
+}
+#menu_icon{
+    width:80px;
+    
+}
+#menu_li{
+    padding-left: 40px;
+}
+/**<-Top nav-bar*/
+@import 'overlay-menu';
+/** profile->*/
+#profile{
+    padding-top: 100px;
+}
+#profile_img{
+    width:300px;
+}
+#profile_name{
+    padding-top: 50px;
+    font-size: 60px;
+}
+#profile_role{
+    font-size: 40px;
+}
+/**<-profile*/
+/** Main-->*/
+#main{
+    margin-bottom:200px;
+}
+/**<-Main*/
+@import 'message-box';
+/** bottom-menu-->*/
+#bottom_menu {
+    position:fixed;
+    background:rgba(0,0,0, 0.8), url("/assets/images/bg@2x.png");
+    bottom:0px;
+    width:100%!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.bottom_menu_active{
+    background-color: grey;
+}
+.bottom_menu_icon{
+    width: 50px;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+/** <--bottome-menu*/
+/*<-body*/
