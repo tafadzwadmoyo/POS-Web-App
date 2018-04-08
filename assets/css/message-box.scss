@@ -3,22 +3,22 @@
     Designed by Tafadzwa Moyo
 */
 #messages{
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3.5%;
+    padding-right: 2%;
     padding-top:20px;
 }
 .message_box{
     background-color: white;
+    /*border-radius: 25px;*/
+    margin-bottom: 30px;
     padding-top:7%;
     padding-bottom:7%;
-    border-radius: 25px;
     text-align: left;
-    margin-bottom: 30px;
 }
 %message_shared{
-    margin-left:100px; 
+    font-size: 40px;
+    margin-left:10px; 
     margin-right:auto;
-    font-size: 30px;
 }
 .message_content{
     @extend %message_shared;
@@ -33,6 +33,6 @@
 }
 .sender_img_container{
     margin-left:auto; 
-    margin-right:100px;
+    margin-right:10px;
 }
 /**<-message*/
