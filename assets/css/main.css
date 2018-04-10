@@ -32,6 +32,22 @@ body {
 }
 
 /**<-Top nav-bar*/
+.top-panel {
+  padding-top: 40px;
+}
+
+.top-panel-icon {
+  width: 80px;
+}
+
+.top-panel-left-icon {
+  margin-left: 80px;
+}
+
+.top-panel-right-icon {
+  margin-right: 80px;
+}
+
 #overlay_menu {
   background-color: #fafbfc;
   color: #707070;
@@ -103,7 +119,7 @@ body {
   text-align: left;
 }
 
-.message_sender, .message_content {
+.chat-message-sender, .chat-message-content, .message_sender, .message_content {
   font-size: 40px;
   margin-left: 10px;
   margin-right: auto;
@@ -154,4 +170,60 @@ body {
 }
 
 /** <--bottom-menu*/
+#search-panel {
+  font-size: 40px;
+  color: #c3c3c3;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+#search-icon {
+  width: 30px;
+}
+
+/**message->*/
+/*
+    Designed by Tafadzwa Moyo
+*/
+#chat-messages {
+  padding-left: 3.5%;
+  padding-right: 2%;
+  padding-top: 20px;
+}
+
+.chat-message-box {
+  background-color: white;
+  /*border-radius: 25px;*/
+  margin-bottom: 30px;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  text-align: left;
+}
+
+.chat-message-sender, .chat-message-content, .message_content, .message_sender {
+  font-size: 40px;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.chat-message-content {
+  color: #757575;
+}
+
+.chat-message-sender {
+  color: black;
+}
+
+.chat-sender-img {
+  width: 100px;
+}
+
+.chat-sender-img-container {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/**<-message*/
 /*<-body*/

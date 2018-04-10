@@ -11,14 +11,20 @@ app.controller('overlayMenuController', function($scope) {
         {target: "settings", icon: "/assets/icons/overlay_menu/settings.png", content: "Settings"},
         {target: "feedback", icon: "/assets/icons/overlay_menu/feedback.png", content: "Send Feedback"},
         {target: "help", icon: "/assets/icons/overlay_menu/help.png", content: "Help"}];
-    $scope.changeTarget=function (targetValue){changePage($scope, targetValue)};  
+    $scope.$parent.openCloseMenu=openCloseMenu;;
 });
+
+
 
 
 angular.module('overlayMenu').component('menuItem', {
     templateUrl: '/assets/html/menu_item.html',
     bindings: { 
-        item: '=',  //Two way binding here, may cause errors in future,
-        changeTarget: '&'
+        item: '=',  //Two way binding here, may cause errors in future
+    },
+    controller: function($scope) {
+        $scope.go=go;
+        
+        // $scope.$ctrl.changeTarget('chat');
     }
 });

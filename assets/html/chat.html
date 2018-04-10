@@ -1,0 +1,11 @@
+<div id="search-panel" class="row">
+    <div class="col-sm-1">
+        <img id="search-icon" src="assets/icons/search.png" />
+    </div>
+    <div class="col-sm-*">
+        Search messages
+    </div>
+</div>
+<div id="chat-messages"  class="text-center" ng-controller="chatMessageBoxController">
+    <chat-message-box chatmessage="chatmessage" ng-repeat="message in chat_messages"></chat-message-box>
+</div>

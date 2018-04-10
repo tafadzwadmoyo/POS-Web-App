@@ -1,0 +1,38 @@
+/**message->*/
+/*
+    Designed by Tafadzwa Moyo
+*/
+#chat-messages{
+    padding-left: 3.5%;
+    padding-right: 2%;
+    padding-top:20px;
+}
+.chat-message-box{
+    background-color: white;
+    /*border-radius: 25px;*/
+    margin-bottom: 30px;
+    padding-top:7%;
+    padding-bottom:7%;
+    text-align: left;
+}
+%message_shared{
+    font-size: 40px;
+    margin-left:10px; 
+    margin-right:auto;
+}
+.chat-message-content{
+    @extend %message_shared;
+    color: #757575;
+}
+.chat-message-sender{
+    @extend %message_shared;
+    color: black;
+}
+.chat-sender-img{
+    width:100px;
+}
+.chat-sender-img-container{
+    margin-left:auto; 
+    margin-right:10px;
+}
+/**<-message*/

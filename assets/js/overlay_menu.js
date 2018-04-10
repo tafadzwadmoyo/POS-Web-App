@@ -2,8 +2,8 @@
     Designed by Tafadzwa Moyo
     Handles the functionality of the overlay menu
 */
-
-jQuery("#menu_icon").click(function (){
+var openCloseMenu=function(){
+    resizeMenu();
     var d=$("#overlay_menu").css('display');
     if (d=='block'){
         $("#overlay_menu").hide( "slide", { direction: "left"  }, 500 );
@@ -13,4 +13,4 @@ jQuery("#menu_icon").click(function (){
         $("#overlay_menu").show( "slide", {direction: "left" }, 500 );
         //$("#overlay_menu").css('display' , 'block');
     }
-})
+}

@@ -16,6 +16,7 @@ body{
 /**Top nav-bar->*/
 #nav-bar{
     padding-top: 40px;
+    //display: none;
 }
 #menu_icon{
     width:80px;
@@ -30,7 +31,9 @@ body{
     padding-top: 5px;
 }
 /**<-Top nav-bar*/
+@import 'top-panel';
 @import 'overlay-menu';
+
 /** profile->*/
 #profile{
     padding-top: 100px;
@@ -77,4 +80,8 @@ body{
     margin-bottom: 15px;
 }
 /** <--bottom-menu*/
+
+//chat page
+@import 'chat-page';
+@import 'chat-message-box';
 /*<-body*/
