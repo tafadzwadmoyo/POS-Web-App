@@ -1,38 +1,47 @@
 /**message->*/
+
+
 /*
     Designed by Tafadzwa Moyo
 */
-#chat-messages{
+
+#chat-messages {
     padding-left: 3.5%;
     padding-right: 2%;
-    padding-top:20px;
+    padding-top: 20px;
 }
-.chat-message-box{
-    background-color: white;
+
+.chat-message-box {
+    background-color: rgba(255, 255, 255, 0.34);
     /*border-radius: 25px;*/
     margin-bottom: 30px;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top: 7%;
+    padding-bottom: 7%;
     text-align: left;
 }
-%message_shared{
+
+%message_shared {
     font-size: 40px;
-    margin-left:10px; 
-    margin-right:auto;
+    margin-right: 10px;
 }
-.chat-message-content{
+
+.chat-message-content {
     @extend %message_shared;
-    color: #757575;
+    color: #dfdfdf;
 }
-.chat-message-sender{
+
+.chat-message-sender {
     @extend %message_shared;
-    color: black;
+    color: white;
 }
-.chat-sender-img{
-    width:100px;
+
+.chat-sender-img {
+    width: 100px;
 }
-.chat-sender-img-container{
-    margin-left:auto; 
-    margin-right:10px;
+
+.chat-sender-img-container {
+    margin-left: 10px;
 }
+
+
 /**<-message*/

@@ -1,0 +1,20 @@
+.sell-payment-heading{
+    font-size:40px;
+    margin-bottom: 40px;
+}
+.sell-payment-option{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#sell-acount-type{
+    border-bottom: 1px solid #c3c3c3;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+$sell-payment-radio-size : 20px;
+.sell-payment-option > input[type=radio]{
+    width: $sell-payment-radio-size;
+    height: $sell-payment-radio-size;
+}

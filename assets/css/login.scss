@@ -1,0 +1,86 @@
+$login-input-height:120px;
+$login-input-width:700px;
+%login-shared {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    height: $login-input-height;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: $login-input-width;
+}
+
+%login-icons {
+    width: 30px;
+}
+
+%login-input-shared {
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 50px;
+    vertical-align: middle;
+}
+
+#login {
+    margin-top: 450px;
+    padding: 30px;
+}
+
+.login-button {
+    background-color: rgb(23, 96, 253);
+    border-radius: 20px;
+    font-size: 40px;
+    height: $login-input-height;
+    margin: auto;
+    margin-top: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: $login-input-width;
+}
+
+#login-forgot-password {
+    margin-right: 120px;
+    color: #adadad;
+}
+
+#login-forgot-password-text {
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: right;
+    width: 100%;
+}
+
+#login-password {
+    @extend %login-shared;
+}
+
+#login-password img {
+    @extend %login-icons;
+}
+
+#login-password-input {
+    @extend %login-input-shared;
+}
+
+#login-text {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#login-username {
+    @extend %login-shared;
+}
+
+#login-username img {
+    @extend %login-icons;
+}
+
+#login-username-input {
+    @extend %login-input-shared;
+}

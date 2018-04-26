@@ -6,13 +6,13 @@
 var app = angular.module('chatMessageBox', []);
 
 app.controller('chatMessageBoxController', function($scope) {
-    $scope.chat_messages = [{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"},{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"},{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"}];
+    $scope.messages = [{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"},{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"},{sender: "Tafadzwa Moyo", senderimg: "/assets/images/profile_pic.jpg", content: "Hello World!"}];
 });
 
 
 angular.module('chatMessageBox').component('chatMessageBox', {
-    templateUrl: '/assets/html/message_box.html',
+    templateUrl: '/assets/html/chat_message_box.html',
     bindings: { 
-        chatmessage: '='  //Two way binding here, may cause errors in future
+        message: '='  //Two way binding here, may cause errors in future
     }
 });

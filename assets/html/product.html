@@ -1,0 +1,33 @@
+<div id="product">
+    <div id="product-top">
+        <div id="product-top-left">
+            <div id="product-title">
+                Nike Air Max 97
+            </div>
+            <div id="product-color">
+                Marina Blue
+            </div>
+        </div>
+        <div id="product-top-right">
+            <div id="product-selling-price">
+                Selling Price: R{{s_price}}
+            </div>
+            <div id="product-cost-price">
+                Cost Price: R{{c_price}}
+            </div>
+        </div>
+    </div>
+    <img id="product-image" src="assets/images/BBN.png">
+    <div id="product-description">
+        The Nike Air Max 97 Marina Blue is an exclusive colourway that's guaranteed to be popular with the gyal dem. This wavy style showcases vibrant hits of colour against a premium white base with touches of metallic silver. It doesn't get more eye-catching
+        or iconic thanks to the vintage detailing throughout.
+    </div>
+    <div id="product-quantity">
+        Available Quantity: {{qty}}
+    </div>
+    <div ng-controller="itemController">
+        <div class="product-save-button text-center" ngclick="go('sell')">
+            save
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div id="search-panel" class="row">
+    <div class="col-sm-1">
+        <img id="search-icon" src="assets/icons/search.png" />
+    </div>
+    <div class="col-sm-11">
+        <input id="search-input" type="text" placeholder="Search item">
+    </div>
+</div>
+<div id="sell-items" class="text-center " ng-controller="itemController">
+    <item-box></item-box>
+    <div class="row sell-add-item">
+        <div class="col-sm-8 sell-add-item-text">
+            Add New Item
+        </div>
+        <div class="col-sm-4 sell-add-item-sign">
+            +
+        </div>
+
+    </div>
+    <div class="sell-totals">
+        <div class="row">
+            <div class="col-sm-3 sell-subtotal sell-price-title">
+                Subtotal:
+            </div>
+            <div class="col-sm-5 sell-subtotal sell-price-value">
+                $5000,00
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 sell-vat sell-price-title">
+                VAT:
+            </div>
+            <div class="col-sm-5 sell-vat sell-price-value">
+                $500,00
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 sell-total sell-price-title">
+                Total:
+            </div>
+            <div class="col-sm-5 sell-total sell-price-value">
+                $5500,00
+            </div>
+        </div>
+    </div>
+    <div class="sell-payment-button text-center" ng-click="go('payment')">
+        Proceed to Payment
+    </div>
+</div>
