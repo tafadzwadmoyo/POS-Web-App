@@ -2,7 +2,7 @@
     Designed by Tafadzwa Moyo
 */
 
-app = angular.module('pos', ['chatMessageBox', 'item', 'messageBox', 'overlayMenu', 'profile', 'ui.router']);
+app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'item', 'messageBox', 'overlayMenu', 'profile', 'ui.router']);
 app.controller('posController', function($scope) {
     $scope.openCloseMenu = openCloseMenu;
     $scope.go = go;
@@ -27,8 +27,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/chat_conversation",
         templateUrl: 'assets/html/chat_conversation.html',
         controller: function($scope) {
+            $scope.$parent.title = 'Chat';
             resizeMenu();
         }
+
     };
     $stateProvider.state(chatConversationState);
 

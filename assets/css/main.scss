@@ -111,6 +111,8 @@ body {
 /** <--bottom-menu*/
 
 //chat page
+@import 'chat-conversation';
+@import 'chat-conversation-item';
 @import 'chat-page';
 @import 'chat-message-box';
 //sell page
@@ -122,5 +124,7 @@ body {
 @import 'product';
 //login
 @import 'login';
+//sales
+@import 'sales';
 
 /*<-body*/

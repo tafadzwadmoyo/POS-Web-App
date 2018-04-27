@@ -1,0 +1,76 @@
+%sales-shared {
+    background-color: white;
+    margin: 50px;
+}
+
+%sales-summary-titles {
+    color: #2a4aff;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+%sales-summary-amounts {
+    font-size: 40px;
+}
+
+#sales {
+    color: #6e6e6e;
+}
+
+#sales-history {
+    @extend %sales-shared;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.sales-history-line {
+    border-bottom: 1px solid #6e6e6e;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.sales-history-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.sales-history-row-amount {
+    font-size: 40px;
+    grid-column: 10/11;
+}
+
+.sales-history-row-date {
+    font-size: 40px;
+    grid-column: 3/7;
+}
+
+#sales-history-title {
+    font-size: 30px;
+}
+
+#sales-summary {
+    @extend %sales-shared;
+    border-radius: 60px;
+    padding: 50px;
+}
+
+.sales-summary-profit-amount {
+    @extend %sales-summary-amounts;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #2a4aff;
+}
+
+.sales-summary-profit-title {
+    @extend %sales-summary-titles;
+}
+
+.sales-summary-revenue-amount {
+    @extend %sales-summary-amounts;
+}
+
+.sales-summary-revenue-title {
+    @extend %sales-summary-titles;
+    padding-top: 45px;
+}

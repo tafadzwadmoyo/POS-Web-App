@@ -171,6 +171,64 @@ body {
 }
 
 /** <--bottom-menu*/
+#chat-conversation {
+  height: 100%;
+}
+
+#chat-conversation-input-box {
+  background: white;
+  bottom: 150px;
+  color: #6E6E6E;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(12, 1fr);
+  position: absolute;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+#chat-conversation-input-icon {
+  display: inline-block;
+  grid-column: 11/12;
+  grid-row: 1;
+  margin-top: 20px;
+  width: 60px;
+}
+
+#chat-conversation-input-plus-sign {
+  grid-column: 2/3;
+  grid-row: 1;
+  margin-top: 5px;
+  width: 60px;
+}
+
+#chat-conversation-input-text {
+  border: 0;
+  font-size: 40px;
+  grid-row: 1;
+  grid-column: 3/11;
+  width: 100;
+}
+
+#chat-conversation-input-text:focus {
+  outline: none;
+}
+
+.chat-conversation-item {
+  background: white;
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+.chat-conversation-item-text {
+  color: black;
+  font-size: 40px;
+  padding: 40px;
+}
+
 #search-panel {
   font-size: 40px;
   color: #c3c3c3;
@@ -545,6 +603,71 @@ body {
 #login-text {
   font-size: 50px;
   margin-bottom: 50px;
+}
+
+#sales-summary, #sales-history {
+  background-color: white;
+  margin: 50px;
+}
+
+.sales-summary-revenue-title, .sales-summary-profit-title {
+  color: #2a4aff;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sales-summary-revenue-amount, .sales-summary-profit-amount {
+  font-size: 40px;
+}
+
+#sales {
+  color: #6e6e6e;
+}
+
+#sales-history {
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.sales-history-line {
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.sales-history-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.sales-history-row-amount {
+  font-size: 40px;
+  grid-column: 10/11;
+}
+
+.sales-history-row-date {
+  font-size: 40px;
+  grid-column: 3/7;
+}
+
+#sales-history-title {
+  font-size: 30px;
+}
+
+#sales-summary {
+  border-radius: 60px;
+  padding: 50px;
+}
+
+.sales-summary-profit-amount {
+  padding-bottom: 45px;
+  border-bottom: 1px solid #2a4aff;
+}
+
+.sales-summary-revenue-title {
+  padding-top: 45px;
 }
 
 /*<-body*/
