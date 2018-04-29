@@ -1,4 +1,4 @@
-.sell-add-item {
+.sell-add-item{
     border: 2px solid;
     font-size: 30px;
     margin-left: 50px;
@@ -6,61 +6,54 @@
     margin-top: 50px;
     //width: 0%;
 }
-
-%sell-add-item-shared {
+%sell-add-item-shared{
     display: block;
     float: left;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom:20px;
+    margin-top:20px;
 }
-
-.sell-add-item-sign {
+.sell-add-item-sign{
     @extend %sell-add-item-shared;
 }
-
-.sell-add-item-text {
+.sell-add-item-text{
     @extend %sell-add-item-shared;
-}
 
-#sell-items {
-    margin-top: 50px;
+}
+#sell-items{
+
+    margin-top:50px;
     margin-left: 50px;
     margin-right: 50px;
+
 }
 
-%sell-totals {
+%sell-totals{
     margin-top: 20px;
 }
-
-.sell-subtotal {
+.sell-subtotal{
     @extend %sell-totals;
     font-size: 30px
 }
-
-.sell-total {
+.sell-total{
     @extend %sell-totals;
     font-size: 35px
 }
-
-.sell-vat {
+.sell-vat{
     @extend %sell-totals;
     font-size: 30px
 }
-
-.sell-totals {
+.sell-totals{
     margin-top: 50px;
     margin-left: 150px;
 }
-
-.sell-price-title {
+.sell-price-title{
     text-align: right;
 }
-
-.sell-price-value {
+.sell-price-value{
     text-align: left;
 }
+.sell-payment-button{
 
-.sell-payment-button {
     background-color: #70B80D;
     border-radius: 60px;
     font-size: 40px;
@@ -69,4 +62,5 @@
     padding-bottom: 25px;
     padding-top: 25px;
     width: 500px;
+
 }

@@ -96,6 +96,10 @@ body {
   width: 100%;
 }
 
+.main-inactive {
+  display: none;
+}
+
 /**<-Main*/
 /**message->*/
 /*
@@ -391,40 +395,6 @@ body {
   width: 500px;
 }
 
-#sell-acount-type {
-  border-bottom: 1px solid #c3c3c3;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-bottom: 100px;
-}
-
-.sell-email-address {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 200px;
-}
-
-#sell-email-address-input {
-  background: rgba(255, 255, 255, 0.1);
-  border: 0;
-  color: white;
-  font-size: 30px;
-}
-
-#sell-email-address-input::-webkit-input-placeholder {
-  /* Chrome */
-  color: white;
-}
-
-#sell-email-address-input:focus {
-  outline: none;
-}
-
-.sell-payment-option > input[type=radio] {
-  width: 20px;
-  height: 20px;
-}
-
 .sell-payment-heading {
   font-size: 40px;
   margin-bottom: 40px;
@@ -433,6 +403,19 @@ body {
 .sell-payment-option {
   font-size: 30px;
   margin-bottom: 30px;
+}
+
+#sell-acount-type {
+  border-bottom: 1px solid #c3c3c3;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 200px;
+  padding-bottom: 100px;
+}
+
+.sell-payment-option > input[type=radio] {
+  width: 20px;
+  height: 20px;
 }
 
 .item-name, .item-category {
