@@ -74,7 +74,6 @@ body {
     width: 100%;
 }
 
-@import 'target-page';
 
 /**<-Main*/
 
@@ -123,8 +122,8 @@ body {
 //product
 @import 'product';
 //login
-@import 'login';
+@import 'login-page';
 //sales
-@import 'sales';
+@import 'sales-page';
 
 /*<-body*/
