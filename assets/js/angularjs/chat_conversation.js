@@ -12,7 +12,7 @@ app.controller('chatConversationController', function($scope) {
 
 
 angular.module('chatConversation').component('chatConversationItem', {
-    templateUrl: '/assets/html/chat_conversation_item.html',
+    templateUrl: 'assets/html/chat_conversation_item.html',
     bindings: {
         message: '=' //Two way binding here, may cause errors in future
     }

@@ -10,7 +10,7 @@ app.controller('itemController', function($scope) {
 
 
 angular.module('item').component('itemBox', {
-    templateUrl: '/assets/html/item.html',
+    templateUrl: 'assets/html/item.html',
     bindings: {
         message: '=' //Two way binding here, may cause errors in future
     }
