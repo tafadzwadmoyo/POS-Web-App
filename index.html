@@ -18,17 +18,25 @@
     <script src="assets/js/setup.js"></script>
     <!-- Getting font from Google -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="assets/js/firebase.js"></script>
+
     <!-- AngularJS file-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="assets/js/angularjs/app.js"></script>
     <script src="assets/js/angularjs/chat_conversation.js"></script>
     <script src="assets/js/angularjs/chat_messages.js"></script>
-    <script src="assets/js/angularjs/item.js"></script>
+    <script src="assets/js/angularjs/sell.js"></script>
+    <script src="assets/js/angularjs/stock.js"></script>
     <script src="assets/js/angularjs/messages.js"></script>
     <script src="assets/js/angularjs/nav_bar.js"></script>
     <script src="assets/js/angularjs/overlaymenu.js"></script>
     <script src="assets/js/angularjs/profile.js"></script>
+    <script src="assets/js/angularjs/product.js"></script>
+    <script src="assets/js/angularjs/product_list.js"></script>
+    <script src="assets/js/angularjs/delete.js"></script>
     <script>
         WebFont.load({
             google: {
@@ -36,9 +44,10 @@
             }
         });
     </script>
+
 </head>
 
-<body>
+<body ng-controller="posController">
     <div id="overlay_menu" ng-controller="overlayMenuController">
         <menu-item item="item" changeTarget="changeTarget" ng-repeat="item in menu_items"></menu-item>
     </div>

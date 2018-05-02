@@ -1,32 +1,34 @@
-<div id="product">
+<div id="product" ng-controller="productController">
     <div id="product-top">
         <div id="product-top-left">
             <div id="product-title">
-                Nike Air Max 97
+                <input class="product-input" value="{{product['name']}}" />
             </div>
             <div id="product-color">
-                Marina Blue
+                <input class="product-input" value="{{product['color']}}" />
             </div>
         </div>
         <div id="product-top-right">
             <div id="product-selling-price">
-                Selling Price: R{{s_price}}
+                Selling Price: R<input class="product-input" value="{{product['s-price']}}" />
             </div>
             <div id="product-cost-price">
-                Cost Price: R{{c_price}}
+                Cost Price: R<input class="product-input" value="{{product['c-price']}}" />
             </div>
         </div>
     </div>
     <img id="product-image" src="assets/images/BBN.png">
     <div id="product-description">
-        The Nike Air Max 97 Marina Blue is an exclusive colourway that's guaranteed to be popular with the gyal dem. This wavy style showcases vibrant hits of colour against a premium white base with touches of metallic silver. It doesn't get more eye-catching
-        or iconic thanks to the vintage detailing throughout.
+        <textarea class="product-textarea ">{{product['description']}}</textarea >
+    </div>
+    <div id="product-category">
+        Category: <input class="product-input" value="{{product['category']}}"/>
     </div>
     <div id="product-quantity">
-        Available Quantity: {{qty}}
+        Available Quantity: <input class="product-input" value="{{product['stock']}}"/>
     </div>
-    <div ng-controller="itemController">
-        <div class="product-save-button text-center" ngclick="go('sell')">
+    <div>
+        <div class="product-save-button text-center" ng-click="save()">
             save
         </div>
     </div>

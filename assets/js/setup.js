@@ -10,3 +10,14 @@ var pages = [{ target: "home", url: "assets/html/home.html", content: "Home" },
     { target: "feedback", url: "assets/html/feedback.html", content: "Send Feedback" },
     { target: "help", url: "assets/html/help.html", content: "Help" },
 ];
+
+/*if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js', {
+            scope: '/'
+        }).then(function(registration) {
+            console.log('Registration successful, scope is:', registration.scope);
+        })
+        .catch(function(error) {
+            console.log('Service worker registration failed, error:', error);
+        });
+}*/

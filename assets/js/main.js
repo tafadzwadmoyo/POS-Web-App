@@ -24,3 +24,5 @@ $(document).ready(function() {
 $(window).resize(function() {
     resizeMenu();
 });
+
+var cart = {};

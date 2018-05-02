@@ -346,7 +346,6 @@ body {
 }
 
 #sell-items {
-  margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -447,6 +446,7 @@ body {
   border-bottom: 1px solid #c3c3c3;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 50px;
   padding-bottom: 50px;
   text-align: left;
 }
@@ -483,6 +483,12 @@ body {
   border-bottom-left-radius: 40px;
 }
 
+.item-add-remove-center {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
 .item-add-remove-right {
   background-color: rgba(255, 255, 255, 0.34);
   border-top-right-radius: 40px;
@@ -496,6 +502,11 @@ body {
 #product {
   padding: 40px;
   margin-top: 30px;
+}
+
+#product-category {
+  margin-top: 30px;
+  font-size: 40px;
 }
 
 #product-color {
@@ -519,6 +530,29 @@ body {
   width: 100%;
 }
 
+.product-textarea, .product-input {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: 0;
+}
+
+.product-input {
+  display: inline;
+}
+
+.product-input:focus {
+  outline: 0;
+}
+
+#product-quantity {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+#product-quantity input {
+  width: 100px;
+}
+
 .product-save-button {
   background-color: #70B80D;
   border-radius: 60px;
@@ -535,9 +569,13 @@ body {
   font-size: 40px;
 }
 
-#product-top-right {
-  grid-column: 7/11;
-  grid-row: 1;
+.product-textarea {
+  width: 100%;
+  height: 400px;
+}
+
+.product-textarea:focus {
+  outline: 0;
 }
 
 #product-title {
@@ -556,9 +594,17 @@ body {
   grid-row: 1;
 }
 
-#product-quantity {
-  margin-top: 30px;
-  font-size: 50px;
+#product-top-left input {
+  width: 100%;
+}
+
+#product-top-right {
+  grid-column: 7/11;
+  grid-row: 1;
+}
+
+#product-top-right input {
+  width: 80px;
 }
 
 #login-username, #login-password {
@@ -685,6 +731,44 @@ body {
 
 .sales-summary-revenue-title {
   padding-top: 45px;
+}
+
+#delete {
+  margin-top: 300px;
+  padding: 50px;
+}
+
+.delete-no-button {
+  background-color: #70B80D;
+  border-radius: 60px;
+  font-size: 40px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  width: 500px;
+}
+
+.delete-yes-button {
+  background-color: red;
+  border-radius: 60px;
+  font-size: 40px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  width: 500px;
+}
+
+#delete-img {
+  width: 150px;
+}
+
+.delete-text {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 35px;
 }
 
 /*<-body*/
