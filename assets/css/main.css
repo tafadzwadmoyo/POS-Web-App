@@ -452,6 +452,7 @@ body {
 }
 
 .item-img {
+  vertical-align: middle;
   width: 100%;
 }
 
@@ -501,7 +502,9 @@ body {
 
 #product {
   padding: 40px;
+  margin: auto;
   margin-top: 30px;
+  margin: auto;
 }
 
 #product-category {
@@ -538,6 +541,13 @@ body {
 
 .product-input {
   display: inline;
+}
+
+#product-new-image {
+  display: none;
+  height: 0;
+  visibility: hidden;
+  width: 0;
 }
 
 .product-input:focus {

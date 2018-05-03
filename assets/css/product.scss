@@ -1,6 +1,8 @@
 #product {
     padding: 40px;
+    margin: auto;
     margin-top: 30px;
+    margin: auto;
 }
 
 #product-category {
@@ -38,6 +40,13 @@
 .product-input {
     @extend %product-shared-input-box;
     display: inline;
+}
+
+#product-new-image {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
 }
 
 .product-input:focus {

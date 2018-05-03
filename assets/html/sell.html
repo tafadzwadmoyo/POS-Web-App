@@ -13,13 +13,13 @@
                 </div>
                 <div class="item-add-remove">
                     <div class="item-add-remove ">
-                        <div class="item-add-remove-left " ng-click='setQty(product, product["qty"]-1)'>
+                        <div class="item-add-remove-left " ng-click='setQty(product["id"], parseInt(product["qty"])-1)'>
                             -
                         </div>
                         <div class="item-add-remove-center ">
                             {{product['qty']}}
                         </div>
-                        <div class="item-add-remove-right" ng-click='setQty(product, product["qty"]+1)'>
+                        <div class="item-add-remove-right" ng-click='setQty(product["id"], parseInt(product["qty"])+1)'>
                             +
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="item-delete">
+                <div class="item-delete" ng-click="delete(product['id'])">
                     delete
                 </div>
             </div>

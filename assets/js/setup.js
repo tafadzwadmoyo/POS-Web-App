@@ -10,7 +10,8 @@ var pages = [{ target: "home", url: "assets/html/home.html", content: "Home" },
     { target: "feedback", url: "assets/html/feedback.html", content: "Send Feedback" },
     { target: "help", url: "assets/html/help.html", content: "Help" },
 ];
-
+var products = {};
+var productsJSON = {};
 /*if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service_worker.js', {
             scope: '/'

@@ -2,14 +2,46 @@
     Designed by Tafadzwa Moyo
 */
 
+/*getProductImageUrl = (product) => {
+    storageRef.child('images/stars.jpg').getDownloadURL().then(function(url)
+        // Or inserted into an <img> element:
+        var img = document.getElementById('myimg'); img.src = url;
+    }).catch(function(error) {
+    // Handle any errors
+});
+}*/
 app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'delete', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'sell', 'stock', 'ui.router']);
 app.controller('posController', function($scope) {
     $scope.openCloseMenu = openCloseMenu;
     $scope.go = go;
+    $scope.productsJSON = productsJSON;
+    $scope.products = products;
+    var getUrls = (arr, i) => {
+        if (i >= arr.length) return;
+        firebase.storage().ref('images/').child(arr[i]['imgId'] + '.png').getDownloadURL().then(function(url) {
+            // Or inserted into an <img> element:
+
+            productsJSON[arr[i]['id']]['imgurl'] = url;
+            products[i]['imgurl'] = url;
+            $scope.productsJSON = productsJSON;
+            $scope.products = products;
+
+            if (!$scope.$$phase) {
+                $scope.$apply();
+            }
+            getUrls(arr, i + 1);
+        })
+    }
     firebase.database().ref('/products/').on('value', function(data) {
-        $scope.productsJSON = data.val();
-        $scope.products = $.map(data.val(), function(el) { return el });
-        $scope.$apply();
+        var tempJSON = data.val();
+        productsJSON = tempJSON;
+        products = $.map(tempJSON, function(el) { return el });
+        $scope.productsJSON = tempJSON;
+        $scope.products = products;
+        getUrls(products, 0);
+        if (!$scope.$$phase) {
+            $scope.$apply();
+        }
     });
 });
 app.factory('product', function(id) {

@@ -10,7 +10,7 @@
     <div id="sell-items" class="text-center ">
         <div class="row item-box " ng-repeat="product in $parent.$parent.products | filter: searchText">
             <div class="col-sm-3 ">
-                <img class="item-img " ng-click="go('product/'+product['id'])" src="/assets/images/profile_pic.jpg ">
+                <img class="item-img " ng-click="go('product/'+product['id'])" src="{{product['imgurl']}}">
             </div>
             <div class="col-sm-4 ">
                 <div class="item-name ">

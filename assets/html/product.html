@@ -17,7 +17,8 @@
             </div>
         </div>
     </div>
-    <img id="product-image" src="assets/images/BBN.png">
+    <img id="product-image" src="{{product['imgurl']}}" onclick="$('#product-new-image').click();">
+    <input id="product-new-image" type="file" accept="image/x-png" />
     <div id="product-description">
         <textarea class="product-textarea ">{{product['description']}}</textarea >
     </div>

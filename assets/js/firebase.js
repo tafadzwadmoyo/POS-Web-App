@@ -10,39 +10,3 @@ var config = {
     messagingSenderId: "173829589356"
 };
 firebase.initializeApp(config);
-
-// Get a reference to the database service
-var database = firebase.database();
-
-//products
-var productsRef = firebase.database().ref('/products/');
-
-
-/*
-
-var productsRef = firebase.database().ref('products');
-var newPostKey = firebase.database().ref().child('products').push().key;
-updates['/products/' + newPostKey] = productData;
-console.log(firebase.database().ref().update(updates));
-
-productData = {
-    "c-price": 75,
-    "name": "Nike Running Shoes",
-    "s-price": 130,
-    "stock": 30
-}
-var newPostKey = firebase.database().ref().child('products').push().key;
-updates['/products/' + newPostKey] = productData;
-console.log(firebase.database().ref().update(updates));
-/*starCountRef.on('value', function(snapshot) {
-    updateStarCount(postElement, snapshot.val());
-});*/
-
-/*
-// Create a root reference
-var storageRef = firebase.storage().ref();
-
-// Create a reference to 'BBN.jpg'
-var productRef = storageRef.child('images/products/BBN.jpg');
-
-*/
