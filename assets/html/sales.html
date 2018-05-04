@@ -1,38 +1,35 @@
-<div id="sales">
+<div id="sales" ng-controller="salesController">
+    <div id='sales-period' class="text-center">
+        <p id="sales-period-text">Select time period</p>
+        Start: <input id='sales-period-start' type="date" ng-model='start' ng-change="changeRange()" min="{{mindate}}" max="{{end}}" value='{{mindate}}'> End: <input id='sales-period-end' type="date" ng-model='end' ng-change="changeRange()" min="{{start}}"
+            max="{{maxdate}}" value='{{maxdate}}'>
+
+    </div>
     <div id="sales-summary" class="text-center">
         <div class="sales-summary-profit-title">
-            Total Monthly Profit
+            Total Profit
         </div>
         <div class="sales-summary-profit-amount">
-            R60,000.00
+            R{{profit}}
         </div>
         <div class="sales-summary-revenue-title">
-            Total Monthly Profit
+            Total Revenue
         </div>
         <div class="sales-summary-revenue-amount">
-            R60,000.00
+            R{{revenue}}
         </div>
     </div>
     <div id="sales-history">
-        <span id="sales-history-title">Sales History</span>
-        <div class="sales-history-row ">
+        <div id="sales-history-title">
+            <span>Sales History</span>
+        </div>
+        <div class="sales-history-row " ng-repeat="day in sales_days">
             <span class="sales-history-row-date">
-                29 Sep. 17
+                {{day['time-stamp']}}
             </span>
             <span class="sales-history-row-amount">
-                R100
+                R{{day['amount']}}
             </span>
-        </div>
-        <div class="sales-history-line">
-
-        </div>
-        <div class="sales-history-row">
-            <span class="sales-history-row-date">
-                    29 Sep. 17
-                </span>
-            <span class="sales-history-row-amount">
-                    R100
-                </span>
         </div>
     </div>
 </div>

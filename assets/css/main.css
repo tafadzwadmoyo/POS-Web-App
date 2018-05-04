@@ -617,7 +617,7 @@ body {
   width: 80px;
 }
 
-#login-username, #login-password {
+#login-password, #login-email {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   border-style: solid;
@@ -629,11 +629,11 @@ body {
   width: 700px;
 }
 
-#login-username img, #login-password img {
+#login-password img, #login-email img {
   width: 30px;
 }
 
-#login-username-input, #login-password-input {
+#login-password-input, #login-email-input {
   background: rgba(0, 0, 0, 0);
   border: 0px;
   color: white;
@@ -678,13 +678,13 @@ body {
   margin-bottom: 50px;
 }
 
-#sales-summary, #sales-history {
-  background-color: white;
+#sales-summary, #sales-period, #sales-history {
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 50px;
 }
 
 .sales-summary-revenue-title, .sales-summary-profit-title {
-  color: #2a4aff;
+  color: #7e7e7e;
   font-size: 45px;
   font-weight: bold;
 }
@@ -694,11 +694,12 @@ body {
 }
 
 #sales {
-  color: #6e6e6e;
+  color: white;
 }
 
 #sales-history {
   border-radius: 30px;
+  font-size: 30px;
   padding: 50px;
 }
 
@@ -716,27 +717,69 @@ body {
 }
 
 .sales-history-row-amount {
-  font-size: 40px;
   grid-column: 10/11;
 }
 
 .sales-history-row-date {
-  font-size: 40px;
-  grid-column: 3/7;
+  grid-column: 2/6;
 }
 
 #sales-history-title {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#sales-history-title span {
   font-size: 30px;
+  grid-column: 2/5;
+  grid-row: 1;
+}
+
+#sales-period {
+  border-radius: 30px;
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 60px;
+  padding: 50px;
+}
+
+#sales-period input[type=date] {
+  background: white;
+  border-radius: 15px;
+  font-size: 30px;
+  grid-column: 7/12;
+  width: 300px;
+}
+
+#sales-period-text {
+  color: #7e7e7e;
+  font-size: 50px;
+  grid-row: 1;
+}
+
+#sales-period-start {
+  grid-row: 2;
+}
+
+#sales-period-start {
+  grid-row: 3;
 }
 
 #sales-summary {
-  border-radius: 60px;
+  border-radius: 30px;
   padding: 50px;
 }
 
 .sales-summary-profit-amount {
   padding-bottom: 45px;
-  border-bottom: 1px solid #2a4aff;
+  border-bottom: 1px solid white;
 }
 
 .sales-summary-revenue-title {
@@ -779,6 +822,157 @@ body {
   font-size: 45px;
   font-weight: bold;
   margin-top: 35px;
+}
+
+#invoice-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  border-radius: 30px;
+  padding: 50px;
+  color: white;
+}
+
+.invoice-heading {
+  color: #6e6e6e;
+  display: grid;
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+}
+
+.invoice-amount-heading {
+  grid-column: 10/11;
+}
+
+.invoice-name-heading {
+  grid-column: 2/6;
+}
+
+.invoice-qty-heading {
+  grid-column: 8/9;
+}
+
+.invoice-row {
+  display: grid;
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.invoice-row-amount {
+  grid-column: 10/11;
+  text-align: right;
+}
+
+.invoice-row-name {
+  grid-column: 2/6;
+}
+
+.invoice-row-qty {
+  grid-column: 8/9;
+}
+
+#invoice-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#invoice-date {
+  font-size: 30px;
+  grid-column: 2/5;
+  grid-row: 2;
+}
+
+#invoice-number {
+  font-size: 30px;
+  grid-column: 10/12;
+  grid-row: 1;
+}
+
+#invoice-title {
+  font-size: 30px;
+  grid-column: 2/5;
+  grid-row: 1;
+}
+
+.invoice-totals {
+  margin-top: 50px;
+}
+
+#client-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  border-radius: 30px;
+  padding: 50px;
+  color: white;
+}
+
+.client-heading {
+  color: #6e6e6e;
+  display: grid;
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+}
+
+.client-amount-heading {
+  grid-column: 10/11;
+}
+
+.client-invoice-number-heading {
+  grid-column: 2/4;
+}
+
+.client-date-heading {
+  grid-column: 6/9;
+}
+
+.client-row {
+  display: grid;
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.client-row-amount {
+  grid-column: 10/11;
+}
+
+.client-invoice-number {
+  grid-column: 2/4;
+}
+
+.client-date {
+  grid-column: 6/9;
+}
+
+#client-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#client-number {
+  font-size: 30px;
+  grid-column: 10/12;
+  grid-row: 1;
+}
+
+#client-title {
+  font-size: 30px;
+  grid-column: 2/5;
+  grid-row: 1;
 }
 
 /*<-body*/

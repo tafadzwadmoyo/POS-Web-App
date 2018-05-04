@@ -26,7 +26,7 @@
                 Subtotal:
             </div>
             <div class="col-sm-5 sell-subtotal sell-price-value">
-                R{{subtotal}}
+                R{{subtotal | number:2}}
             </div>
         </div>
         <div class="row">
@@ -34,7 +34,7 @@
                 VAT:
             </div>
             <div class="col-sm-5 sell-vat sell-price-value">
-                R{{subtotal*.15}}
+                R{{subtotal*.15 | number:2}}
             </div>
         </div>
         <div class="row">
@@ -42,7 +42,7 @@
                 Total:
             </div>
             <div class="col-sm-5 sell-total sell-price-value">
-                R{{subtotal*1.15}}
+                R{{subtotal*1.15 | number:2}}
             </div>
         </div>
     </div>

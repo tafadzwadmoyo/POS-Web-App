@@ -10,7 +10,7 @@
     // Handle any errors
 });
 }*/
-app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'delete', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'sell', 'stock', 'ui.router']);
+app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'client', 'delete', 'invoice', 'login', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'sales', 'sell', 'stock', 'ui.router']);
 app.controller('posController', function($scope) {
     $scope.openCloseMenu = openCloseMenu;
     $scope.go = go;
@@ -79,6 +79,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
     };
     $stateProvider.state(chatConversationState);
 
+    var clientState = {
+        name: 'Client',
+        url: "/client/:id",
+        templateUrl: 'assets/html/client.html',
+        controller: function($scope, $stateParams) {
+            $scope.$parent.title = 'Client Zone';
+            $scope.clientId = $stateParams.id;
+            resizeMenu();
+        }
+
+    };
+    $stateProvider.state(clientState);
+
     var deleteState = {
         name: 'Delete',
         url: "/delete?id&name&imgurl",
@@ -93,6 +106,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     };
     $stateProvider.state(deleteState);
+
+    var invoiceState = {
+        name: 'Invoice',
+        url: "/invoice/:id",
+        templateUrl: 'assets/html/Invoice.html',
+        controller: function($scope, $stateParams) {
+            $scope.$parent.title = 'Invoice';
+            $scope.invoiceId = $stateParams.id;
+            resizeMenu();
+        }
+
+    };
+    $stateProvider.state(invoiceState);
 
     var loginState = {
         name: 'login',

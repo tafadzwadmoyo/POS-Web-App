@@ -1,0 +1,57 @@
+<div id="invoice" ng-controller="invoiceController">
+    <div id="invoice-box">
+        <div id="invoice-header">
+            <span id="invoice-title">Invoice</span>
+            <span id="invoice-number">#{{invoice.invoiceNumber}}</span>
+            <span id="invoice-date">{{String(invoice['time-stamp']['year'])+'/'+String(invoice['time-stamp']['month'])+'/'+String(invoice['time-stamp']['date'])}}</span>
+        </div>
+        <div class="invoice-heading ">
+            <span class="invoice-name-heading">
+                    Name
+                </span>
+            <span class="invoice-qty-heading">
+                    Qty
+                </span>
+            <span class="invoice-amount-heading">
+                    Price
+                </span>
+        </div>
+        <div class="invoice-row " ng-repeat="item in invoice.items">
+            <span class="invoice-row-name">
+                {{item.name}}
+            </span>
+            <span class="invoice-row-qty">
+                {{item.qty}}
+            </span>
+            <span class="invoice-row-amount">
+                R{{item.price}}
+            </span>
+        </div>
+        <div class="invoice-totals">
+            <div class="invoice-row">
+                <div class="invoice-row-name">
+                    Subtotal:
+                </div>
+                <div class="invoice-row-amount">
+                    R{{invoice.subtotal/1.15 | number : 2}}
+                </div>
+            </div>
+            <div class="invoice-row">
+                <div class="invoice-row-name">
+                    VAT:
+                </div>
+                <div class="invoice-row-amount">
+                    R{{invoice.subtotal*0.15/1.15 | number : 2}}
+                </div>
+            </div>
+            <div class="invoice-row">
+                <div class="invoice-row-name">
+                    Total:
+                </div>
+                <div class="invoice-row-amount">
+                    R{{invoice.subtotal | number : 2}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

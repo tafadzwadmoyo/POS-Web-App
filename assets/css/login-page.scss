@@ -43,6 +43,18 @@ $login-input-width:700px;
     width: $login-input-width;
 }
 
+#login-email {
+    @extend %login-shared;
+}
+
+#login-email img {
+    @extend %login-icons;
+}
+
+#login-email-input {
+    @extend %login-input-shared;
+}
+
 #login-forgot-password {
     margin-right: 120px;
     color: #adadad;
@@ -71,16 +83,4 @@ $login-input-width:700px;
 #login-text {
     font-size: 50px;
     margin-bottom: 50px;
-}
-
-#login-username {
-    @extend %login-shared;
-}
-
-#login-username img {
-    @extend %login-icons;
-}
-
-#login-username-input {
-    @extend %login-input-shared;
 }
