@@ -18,7 +18,7 @@
                         Amount
                     </span>
         </div>
-        <div class="client-row " ng-click="go('invoice/'+String(invoice.invoiceNumber))" ng-repeat="invoice in invoices">
+        <div class="client-row " ng-click="go('invoice?id='+String(invoice.invoiceNumber))" ng-repeat="invoice in invoices">
             <span class="client-invoice-number">
                     {{invoice.invoiceNumber}}
                 </span>

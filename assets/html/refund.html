@@ -1,0 +1,37 @@
+<div id="refund" ng-controller="refundController">
+    <div id="search-panel" class="row">
+        <div class="col-sm-1">
+            <img id="search-icon" src="assets/icons/search.png" />
+        </div>
+        <div class="col-sm-11">
+            <input id="search-input" ng-model="searchText" type="text" placeholder="Search for invoice to refund">
+        </div>
+    </div>
+    <div id="refund-invoices">
+        <div id="refund-invoice-title">
+            <span>Select the invoice which you want to refund</span>
+        </div>
+        <div class="refund-invoice-row refund-headings">
+            <span class="refund-invoice-number">
+                Invoice #
+            </span>
+            <span class="refund-invoice-date">
+                Date
+            </span>
+            <span class="refund-invoice-amount">
+                Total
+            </span>
+        </div>
+        <div class="refund-invoice-row " ng-click="go('invoice?id='+String(invoice['invoiceNumber'])+'&refund=true')" ng-repeat="invoice in $parent.$parent.invoices  | filter: searchText">
+            <span class="refund-invoice-number">
+                {{invoice['invoiceNumber']}}
+            </span>
+            <span class="refund-invoice-date">
+                {{String(invoice['time-stamp']['year'])+'/'+String(invoice['time-stamp']['month'])+'/'+String(invoice['time-stamp']['date'])}}
+            </span>
+            <span class="refund-invoice-amount">
+                R{{invoice['total'] | number:2}}
+            </span>
+        </div>
+    </div>
+</div>

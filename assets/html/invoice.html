@@ -1,4 +1,8 @@
 <div id="invoice" ng-controller="invoiceController">
+    <div id="invoice-refund-notice" class="invoice-refund">
+        <div id="invoice-refund-notice-heading">Refund Notice</div>
+        To refund a customer change the quanity of the items he would liek a refund for. E.g. if the customer bought 10 watches and would like to return 4, change the quanity of the items on the invoice to 6 and then save he invoice.
+    </div>
     <div id="invoice-box">
         <div id="invoice-header">
             <span id="invoice-title">Invoice</span>
@@ -21,10 +25,11 @@
                 {{item.name}}
             </span>
             <span class="invoice-row-qty">
-                {{item.qty}}
+                <input id="invoice-row-qty-input" class="invoice-refund" value='{{item.qty}}'>
+                <span class='not-invoice-refund'>{{item.qty}}</span>
             </span>
             <span class="invoice-row-amount">
-                R{{item.price}}
+                R{{item['s-price']}}
             </span>
         </div>
         <div class="invoice-totals">
@@ -33,7 +38,7 @@
                     Subtotal:
                 </div>
                 <div class="invoice-row-amount">
-                    R{{invoice.subtotal/1.15 | number : 2}}
+                    R{{invoice.subtotal | number : 2}}
                 </div>
             </div>
             <div class="invoice-row">
@@ -41,7 +46,7 @@
                     VAT:
                 </div>
                 <div class="invoice-row-amount">
-                    R{{invoice.subtotal*0.15/1.15 | number : 2}}
+                    R{{invoice.subtotal*0.15 | number : 2}}
                 </div>
             </div>
             <div class="invoice-row">
@@ -49,9 +54,12 @@
                     Total:
                 </div>
                 <div class="invoice-row-amount">
-                    R{{invoice.subtotal | number : 2}}
+                    R{{invoice.subtotal*1.15 | number : 2}}
                 </div>
             </div>
         </div>
+    </div>
+    <div class="invoice-save-button invoice-refund text-center" ng-click="save()">
+        save
     </div>
 </div>

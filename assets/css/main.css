@@ -871,6 +871,19 @@ body {
   grid-column: 8/9;
 }
 
+.invoice-row-amount-input,
+.invoice-row-name-input,
+.invoice-row-qty-input {
+  border: 0px;
+  width: 100px;
+}
+
+.invoice-row-amount-input:focus,
+.invoice-row-name-input:focus,
+.invoice-row-qty-input:focus {
+  outline: none;
+}
+
 #invoice-header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -903,6 +916,36 @@ body {
 
 .invoice-totals {
   margin-top: 50px;
+}
+
+.invoice-refund {
+  display: none;
+}
+
+#invoice-refund-notice {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  color: white;
+  margin: 50px;
+  font-size: 30px;
+  padding: 50px;
+}
+
+#invoice-refund-notice-heading {
+  color: blue;
+  font-size: 40px;
+  text-align: center;
+}
+
+.invoice-save-button {
+  background-color: #70B80D;
+  border-radius: 60px;
+  font-size: 40px;
+  margin: auto;
+  margin-top: 40px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  width: 500px;
 }
 
 #client-box {
@@ -973,6 +1016,76 @@ body {
   font-size: 30px;
   grid-column: 2/5;
   grid-row: 1;
+}
+
+#refund-period, #refund-invoices {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  margin: 50px;
+}
+
+#refund {
+  color: white;
+}
+
+.refund-headings {
+  color: #6e6e6e;
+  margin-bottom: 50px;
+}
+
+#refund-invoices {
+  font-size: 30px;
+  padding: 50px;
+}
+
+.refund-invoice-line {
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.refund-invoice-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.refund-invoice-amount {
+  grid-column: 10/11;
+}
+
+.refund-invoice-date {
+  grid-column: 6/8;
+}
+
+.refund-invoice-number {
+  grid-column: 2/4;
+}
+
+#refund-invoice-title {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px;
+  border-bottom: 1px solid #6e6e6e;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#refund-invoice-title span {
+  font-size: 30px;
+  grid-column: 2/12;
+  grid-row: 1;
+}
+
+#refund-period {
+  font-size: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 60px;
+  padding: 50px;
 }
 
 /*<-body*/

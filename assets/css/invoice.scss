@@ -45,6 +45,20 @@
     grid-column: 8/9;
 }
 
+.invoice-row-amount-input,
+.invoice-row-name-input,
+.invoice-row-qty-input {
+    //background: rgba(0, 00, 0, 0);
+    border: 0px;
+    width: 100px;
+}
+
+.invoice-row-amount-input:focus,
+.invoice-row-name-input:focus,
+.invoice-row-qty-input:focus {
+    outline: none;
+}
+
 #invoice-header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -77,4 +91,34 @@
 
 .invoice-totals {
     margin-top: 50px;
+}
+
+.invoice-refund {
+    display: none;
+}
+
+#invoice-refund-notice {
+    background-color: rgba(0, 00, 0, 0.5);
+    border-radius: 30px;
+    color: white;
+    margin: 50px;
+    font-size: 30px;
+    padding: 50px;
+}
+
+#invoice-refund-notice-heading {
+    color: blue;
+    font-size: 40px;
+    text-align: center;
+}
+
+.invoice-save-button {
+    background-color: #70B80D;
+    border-radius: 60px;
+    font-size: 40px;
+    margin: auto;
+    margin-top: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 500px;
 }

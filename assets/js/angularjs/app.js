@@ -10,7 +10,7 @@
     // Handle any errors
 });
 }*/
-app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'client', 'delete', 'invoice', 'login', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'sales', 'sell', 'stock', 'ui.router']);
+app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'client', 'delete', 'invoice', 'login', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'refund', 'sales', 'sell', 'stock', 'ui.router']);
 app.controller('posController', function($scope) {
     $scope.openCloseMenu = openCloseMenu;
     $scope.go = go;
@@ -42,6 +42,11 @@ app.controller('posController', function($scope) {
         if (!$scope.$$phase) {
             $scope.$apply();
         }
+    });
+    firebase.database().ref('/invoices/').on('value', function(invoices) {
+        var tempJSON = invoices.val();
+        $scope.invoicesJSON = tempJSON;
+        $scope.invoices = $.map(tempJSON, function(el) { return el });;
     });
 });
 app.factory('product', function(id) {
@@ -109,11 +114,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     var invoiceState = {
         name: 'Invoice',
-        url: "/invoice/:id",
+        url: "/invoice?id&refund",
         templateUrl: 'assets/html/Invoice.html',
         controller: function($scope, $stateParams) {
             $scope.$parent.title = 'Invoice';
             $scope.invoiceId = $stateParams.id;
+            $scope.refund = $stateParams.refund;
             resizeMenu();
         }
 
