@@ -871,16 +871,14 @@ body {
   grid-column: 8/9;
 }
 
-.invoice-row-amount-input,
-.invoice-row-name-input,
-.invoice-row-qty-input {
+#invoice-row-qty-input {
+  background: rgba(0, 0, 0, 0);
   border: 0px;
-  width: 100px;
+  color: white;
+  width: 60px;
 }
 
-.invoice-row-amount-input:focus,
-.invoice-row-name-input:focus,
-.invoice-row-qty-input:focus {
+#invoice-row-qty-input:focus {
   outline: none;
 }
 

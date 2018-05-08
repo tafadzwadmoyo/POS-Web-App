@@ -12,4 +12,9 @@ app.controller('loginController', function($scope) {
             // ...
         });
     }
+    $scope.enterLogin = function(keyEvent) {
+        if (keyEvent.which === 13)
+            $scope.login();
+    }
+
 });

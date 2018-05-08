@@ -1,5 +1,5 @@
 <div id="invoice" ng-controller="invoiceController">
-    <div id="invoice-refund-notice" class="invoice-refund">
+    <div id="invoice-refund-notice" ng-show="refund">
         <div id="invoice-refund-notice-heading">Refund Notice</div>
         To refund a customer change the quanity of the items he would liek a refund for. E.g. if the customer bought 10 watches and would like to return 4, change the quanity of the items on the invoice to 6 and then save he invoice.
     </div>
@@ -20,16 +20,17 @@
                     Price
                 </span>
         </div>
-        <div class="invoice-row " ng-repeat="item in invoice.items">
+        <div class="invoice-row " ng-repeat="(key, value) in invoice.items">
             <span class="invoice-row-name">
-                {{item.name}}
+                {{invoice.items[key].name}}
             </span>
+
             <span class="invoice-row-qty">
-                <input id="invoice-row-qty-input" class="invoice-refund" value='{{item.qty}}'>
-                <span class='not-invoice-refund'>{{item.qty}}</span>
+                <input id="invoice-row-qty-input" ng-change="setSubTotal()" ng-show="refund" value='{{invoice.items[key].qty}}' ng-model='invoice.items[key].qty' />
+                <span ng-show="!refund" >{{invoice.items[key].qty}}</span>
             </span>
             <span class="invoice-row-amount">
-                R{{item['s-price']}}
+                R{{invoice.items[key]['qty']*invoice.items[key]['s-price']}}
             </span>
         </div>
         <div class="invoice-totals">
@@ -59,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="invoice-save-button invoice-refund text-center" ng-click="save()">
+    <div class="invoice-save-button text-center" ng-show="refund" ng-click="save()">
         save
     </div>
 </div>

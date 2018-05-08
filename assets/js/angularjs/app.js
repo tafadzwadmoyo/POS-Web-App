@@ -12,6 +12,13 @@
 }*/
 app = angular.module('pos', ['chatConversation', 'chatMessageBox', 'client', 'delete', 'invoice', 'login', 'messageBox', 'overlayMenu', 'product', 'productList', 'profile', 'refund', 'sales', 'sell', 'stock', 'ui.router']);
 app.controller('posController', function($scope) {
+    var user = firebase.auth().currentUser;
+
+    if (user || ($scope.title && $scope.title == 'Login')) {
+        // User is signed in.
+    } else {
+        go('login');
+    }
     $scope.openCloseMenu = openCloseMenu;
     $scope.go = go;
     $scope.productsJSON = productsJSON;
@@ -131,6 +138,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/login",
         templateUrl: 'assets/html/login.html',
         controller: function($scope) {
+            $scope.$parent.title = 'Login';
             resizeMenu();
         }
     };

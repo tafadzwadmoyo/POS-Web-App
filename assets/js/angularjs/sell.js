@@ -91,10 +91,9 @@ app.controller('paymentController', function($scope) {
                 var client = $('#sell-email-address-input').val().replace("@", "__-at-__");
                 client = client.replace(".", "__-dot-__");
                 updates['invoices/' + String(invoiceNumber) + '/client'] = client;
-                updates['invoices/' + String(invoiceNumber) + '/invoiceNumber'] = invoiceNumber;
                 updates['users/' + client + '/invoices/' + String(invoiceNumber)] = invoiceNumber;
             }
-
+            updates['invoices/' + String(invoiceNumber) + '/invoiceNumber'] = invoiceNumber;
             updates['app-info/next-invoice-number'] = invoiceNumber + 1;
             firebase.database().ref().update(updates);
             cart = {};
