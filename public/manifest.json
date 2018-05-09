@@ -1,0 +1,32 @@
+{
+    "short_name": "PTNS",
+    "name": "Portable Trading Network System",
+    "icons": [{
+            "src": "assets/AppIcons/android/drawable-mdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "assets/AppIcons/android/drawable-hdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "assets/AppIcons/android/drawable-xhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "assets/AppIcons/android/drawable-xxhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+
+        {
+            "src": "assets/AppIcons/android/drawable-xxxhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": "index.html?launcher=true"
+}
