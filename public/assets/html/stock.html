@@ -1,0 +1,58 @@
+<div id="stock-page" ng-controller="stockController">
+    <div id="search-panel" class="row">
+        <div class="col-sm-1">
+            <img id="search-icon" src="assets/icons/search.png" />
+        </div>
+        <div class="col-sm-11">
+            <input id="search-input" ng-model="searchText" type="text" placeholder="Search item">
+        </div>
+    </div>
+    <div id="sell-items" class="text-center ">
+        <div class="row item-box " ng-repeat="product in $parent.$parent.products | filter: searchText">
+            <div class="col-sm-3 ">
+                <img class="item-img " ng-click="go('product/'+product['id'])" src="{{product['imgurl']}}">
+            </div>
+            <div class="col-sm-4 ">
+                <div class="item-name ">
+                    {{product['name']}}
+                </div>
+                <div class="item-price ">
+                    cost: R{{product['c-price']}}
+                </div>
+                <div class="item-price ">
+                    price: R{{product['s-price']}}
+                </div>
+                <div class="item-add-remove ">
+                    <div class="item-add-remove-left " ng-click='setStock(product, parseInt(product["stock"])-1)'>
+                        -
+                    </div>
+                    <div class="item-add-remove-center ">
+                        {{product['stock']}}
+                    </div>
+                    <div class="item-add-remove-right" ng-click='setStock(product, parseInt(product["stock"])+1)'>
+                        +
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="item-category ">
+                    {{product['category']}}
+                </div>
+            </div>
+            <div class="col-sm-2 ">
+                <div class="item-delete " ng-click="go('delete?id='+product['id']+'&name='+product['name']+'&imgurl='+product['imgurl'])">
+                    delete
+                </div>
+            </div>
+        </div>
+        <div class="row sell-add-item " ng-click="go('product/new')">
+            <div class="col-sm-8 sell-add-item-text ">
+                Add New Item
+            </div>
+            <div class="col-sm-4 sell-add-item-sign ">
+                +
+            </div>
+
+        </div>
+    </div>
+</div>

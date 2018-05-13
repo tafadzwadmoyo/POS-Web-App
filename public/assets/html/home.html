@@ -1,0 +1,8 @@
+<div id="profile" class="text-center" ng-init="changeTitle('home')" ng-controller="profileController">
+    <img id="profile_img" src="{{profile.imgurl}}" class="rounded-circle" />
+    <h1 id="profile_name"> {{profile.name}} </h1>
+    <p id="profile_role">{{profile.role}}</p>
+</div>
+<div id="messages"  class="text-center" ng-controller="messageBoxController">
+    <message-box message="message" ng-repeat="message in messages"></message-box>
+</div>

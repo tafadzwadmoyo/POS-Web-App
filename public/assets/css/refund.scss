@@ -1,0 +1,71 @@
+%refund-shared {
+    background-color: rgba(0, 00, 0, 0.5);
+    border-radius: 30px;
+    margin: 50px;
+}
+
+#refund {
+    color: white;
+}
+
+.refund-headings {
+    color: #6e6e6e;
+    margin-bottom: 50px;
+}
+
+#refund-invoices {
+    @extend %refund-shared;
+    font-size: 30px;
+    padding: 50px;
+}
+
+.refund-invoice-line {
+    border-bottom: 1px solid #6e6e6e;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.refund-invoice-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.refund-invoice-amount {
+    grid-column: 10/11;
+}
+
+.refund-invoice-date {
+    grid-column: 6/8;
+}
+
+.refund-invoice-number {
+    grid-column: 2/4;
+}
+
+#refund-invoice-title {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 50px;
+    border-bottom: 1px solid #6e6e6e;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+#refund-invoice-title span {
+    font-size: 30px;
+    grid-column: 2/12;
+    grid-row: 1;
+}
+
+#refund-period {
+    @extend %refund-shared;
+    font-size: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 60px;
+    padding: 50px;
+}

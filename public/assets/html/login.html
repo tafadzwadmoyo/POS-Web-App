@@ -1,0 +1,23 @@
+<div id="login" class="text-center" ng-controller="loginController" ng-keypress="enterLogin($event)">
+    <div id="login-text">
+        Sign in to get started
+    </div>
+    <div id="login-email" class="center-block">
+        <img src="/assets/icons/user.svg" />
+        <input id="login-email-input" placeholder="email address" />
+    </div>
+
+    <div id="login-password">
+        <img src="/assets/icons/lock.svg" />
+        <input id="login-password-input" type='password' placeholder="password" />
+    </div>
+    <div id="login-forgot-password">
+        <p id="login-forgot-password-text">
+            forgot password?
+        </p>
+    </div>
+
+    <div class="login-button text-center" ng-click='login()'>
+        LOGIN
+    </div>
+</div>
