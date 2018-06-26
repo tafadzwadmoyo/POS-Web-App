@@ -48,6 +48,7 @@ app.controller('salesController', function($scope) {
             }
             $('#sales-period-start').val($scope.mindate);
             $('#sales-period-end').val($scope.maxdate);
+            console.log(sales_days)
         }
 
 

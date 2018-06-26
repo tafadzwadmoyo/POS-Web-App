@@ -89,7 +89,6 @@ app.controller('paymentController', function($scope) {
             updates['invoices/' + String(invoiceNumber) + '/total'] = $scope.subtotal * 1.15;
             updates['invoices/' + String(invoiceNumber) + '/time-stamp'] = timeStamp;
             if ($('#sell-email-address-input').val().length > 2) {
-                str = "Visit Microsoft!";
                 var client = $('#sell-email-address-input').val().replace("@", "__-at-__");
                 client = client.replace(".", "__-dot-__");
                 updates['invoices/' + String(invoiceNumber) + '/client'] = client;

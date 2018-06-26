@@ -75,14 +75,13 @@ app.controller('productController', function($scope, getProduct) {
             };
 
             firebase.database().ref('files/images/' + newPostKey).update(updates);
-            var storageRef = firebase.storage().ref("images/" + newPostKey + ".png");
+
             var file = $("#product-new-image")[0].files[0];
-            storageRef.put(file);
             var name = file.name.split('.');
             var type = name[name.length - 1];
+            var storageRef = firebase.storage().ref("images/" + newPostKey + '.' + type);
+            storageRef.put(file);
             $scope.product['imgId'] = newPostKey + '.' + type;
-        } else {
-            $scope.product['imgId'] = 'placeholder.jpg';
         }
         $scope.product['name'] = $("#product-title :input").val();
         $scope.product['color'] = $("#product-color :input").val();

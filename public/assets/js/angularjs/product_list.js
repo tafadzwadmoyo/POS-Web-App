@@ -14,5 +14,7 @@ app.controller('productListController', function($scope) {
     } else setTimeout(null, 1000);
     $scope.productsJSON = $scope.$parent.$parent.productsJSON;
     $scope.products = $scope.$parent.$parent.products;
-    $scope.go = go;
+    $scope.go = (path, product) => {
+        go(path);
+    }
 });

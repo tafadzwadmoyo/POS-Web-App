@@ -22,7 +22,7 @@
                 Total
             </span>
         </div>
-        <div class="refund-invoice-row " ng-click="go('invoice?id='+String(invoice['invoiceNumber'])+'&refund=true')" ng-repeat="invoice in $parent.$parent.invoices  | filter: searchText">
+        <div class="refund-invoice-row " ng-click="go('invoice?id='+String(invoice['invoiceNumber'])+'&refund=true')" ng-repeat="invoice in $parent.$parent.invoices  | filter: searchText | orderBy:'-invoiceNumber'">
             <span class="refund-invoice-number">
                 {{invoice['invoiceNumber']}}
             </span>

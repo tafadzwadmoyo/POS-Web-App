@@ -140,7 +140,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     var invoiceState = {
         name: 'Invoice',
         url: "/invoice?id&refund",
-        templateUrl: 'assets/html/Invoice.html',
+        templateUrl: 'assets/html/invoice.html',
         controller: function($scope, $stateParams) {
             $scope.$parent.title = 'Invoice';
             $scope.invoiceId = $stateParams.id;
